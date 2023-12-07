@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/fondo"
+    tools:context=".ChatActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#80000000" />
+
+        <Button
+            android:id="@+id/btnConnect"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="CONCETARSE"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/btnPublish"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="PUBLCIAR MENSAJE"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/btnConnect" />
+
+        <EditText
+            android:id="@+id/editTextPublish"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:background="@color/white"
+            android:hint="Enter message to publish"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/btnPublish" />
+
+        <Button
+            android:id="@+id/btnSubscribe"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="SUSCRIBIR MENSAJE"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/editTextPublish" />
+
+        <EditText
+            android:id="@+id/editTextSubscribe"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:background="@color/white"
+            android:hint="Enter topic to subscribe"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/btnSubscribe" />
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="336dp"
+            android:text="G U A R D A R  C H A T S "
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <LinearLayout
+            android:id="@+id/identifierLayout"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:gravity="center"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView3">
+
+            <EditText
+                android:id="@+id/txtid"
+                android:layout_width="381dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@color/white"
+                android:ems="10"
+                android:hint="Identificador"
+                android:inputType="text" />
+
+            <!-- Add other EditText views as needed -->
+
+        </LinearLayout>
+
+        <!-- New EditText for Medication Name -->
+        <EditText
+            android:id="@+id/txtnombreMensaje"
+            android:layout_width="0dp"
+            android:layout_height="52dp"
+            android:layout_marginTop="16dp"
+            android:ems="10"
+            android:hint="nombreMensaje"
+            android:inputType="text"
+            android:background="@color/white"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/identifierLayout" />
+
+        <!-- New EditText for Patient Name -->
+        <EditText
+            android:id="@+id/txttipoMensaje"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="16dp"
+            android:ems="10"
+            android:hint="tipoMensaje"
+            android:inputType="text"
+            android:background="@color/white"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtnombreMensaje" />
+
+        <!-- New EditText for Doctor Name -->
+        <EditText
+            android:id="@+id/txtContenido"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_marginTop="16dp"
+            android:ems="10"
+            android:hint="contenido"
+            android:inputType="text"
+            android:background="@color/white"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txttipoMensaje" />
+
+        <EditText
+            android:id="@+id/txttimestamp"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_marginTop="72dp"
+            android:background="@color/white"
+            android:ems="10"
+            android:hint="timestamp"
+            android:inputType="text"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txttipoMensaje" />
+
+        <LinearLayout
+            android:id="@+id/buttonLayout"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:gravity="center"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txttimestamp">
+
+            <!-- Add buttons or other UI elements as needed -->
+
+        </LinearLayout>
+
+        /
+
+        <Button
+            android:id="@+id/btnModificar"
+            android:layout_width="136dp"
+            android:layout_height="53dp"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="76dp"
+            android:layout_weight="1"
+            android:text="MODIFICAR"
+            app:layout_constraintEnd_toStartOf="@+id/btnRegistrar"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView5" />
+
+        <Button
+            android:id="@+id/btnRegistrar"
+            android:layout_width="160dp"
+            android:layout_height="70dp"
+            android:layout_marginBottom="64dp"
+            android:layout_weight="1"
+            android:text="REGISTRAR"
+            app:layout_constraintBottom_toTopOf="@+id/btnRegresarContacto"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <Button
+            android:id="@+id/btnEliminar"
+            android:layout_width="134dp"
+            android:layout_height="55dp"
+            android:layout_marginTop="76dp"
+            android:layout_marginEnd="32dp"
+            android:layout_weight="1"
+            android:text="ELIMINAR"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/btnRegistrar"
+            app:layout_constraintTop_toBottomOf="@+id/textView5" />
+
+        <Button
+            android:id="@+id/btnRegresarContacto"
+            android:layout_width="213dp"
+            android:layout_height="41dp"
+            android:layout_marginTop="140dp"
+            android:layout_weight="1"
+            android:text="REGRESAR A CONTACTO"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView5" />
+
+        <TextView
+            android:id="@+id/textView5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="100dp"
+            android:text="R E G I S T R A R  C H A T S"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.497"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtContenido"
+            android:textColor="@color/white"/>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>

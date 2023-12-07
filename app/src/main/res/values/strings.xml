@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">ConectaMovil</string>
+
+
+    <string name="mqtt_hostname">2fbcb3fe62f9430c8c154d6464ddfd83.s1.eu.hivemq.cloud</string>
+    <string name="mqtt_port">8884</string>
+
+
+</resources>
